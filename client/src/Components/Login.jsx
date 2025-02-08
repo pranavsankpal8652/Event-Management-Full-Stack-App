@@ -61,7 +61,7 @@ function Login({ Modal }) {
               <span>not the member!
                 <Link to='/register' className=' underline text-blue-400 text-lg p-3'>register here</Link>
               </span>
-              <Link to="/" className='text-lg text-left absolute left-20'>&larr; Back to home</Link>
+              <Link to="/" className='text-lg text-left md:absolute md:left-20 my-4 md:my-0'>&larr; Back to home</Link>
             </div>
           </>
 

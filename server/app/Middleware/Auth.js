@@ -53,7 +53,7 @@ const verifyToken = (req, res, next) => {
     try {
         const verified = jwt.verify(token, process.env.JWT_SECRET_KEY);
         req.user = verified; // Attach user data to request
-        // console.log(req.user)
+        console.log(req.user)
         next();
     } catch (error) {
         res.status(400).json({ message: "Invalid Token.Try Login Again" });
