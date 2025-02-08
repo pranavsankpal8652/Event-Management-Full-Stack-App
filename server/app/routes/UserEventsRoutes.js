@@ -1,6 +1,6 @@
 const express=require('express')
 const { verifyToken } = require('../Middleware/Auth')
-const { createEvent, readEvents, deleteEvents } = require('../controller/USerEventController')
+const { createEvent, readEvents, deleteEvents } = require('../controller/UserEventController')
 
 const OwnerEventRoutes=express.Router()
 
