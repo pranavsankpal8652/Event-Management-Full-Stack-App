@@ -18,7 +18,7 @@ app.use(mainRoutes)
 
 webSocket(server)  //Call The Socket Connection
 // Set the port from environment variables or default to 3000
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 4000;
 
 // Start the server
 mongoose.connect(`${process.env.DB_CONNECTION+process.env.DB_NAME}`)
