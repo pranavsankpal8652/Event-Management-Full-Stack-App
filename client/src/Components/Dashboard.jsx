@@ -154,7 +154,7 @@ function EventDashboard() {
                             <input
                                 type="date"
                                 id="startDate"
-                                name='startdate'
+                                name='startDate'
                                 value={filter.startDate}
                                 onChange={handlefilterChange}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-lg"
