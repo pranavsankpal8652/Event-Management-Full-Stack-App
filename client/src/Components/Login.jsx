@@ -6,10 +6,10 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../context/AuthContext';
 import LoginForm from './LoginForm';
 
-function Login({Modal}) {
+function Login({ Modal }) {
   const navigate = useNavigate()
 
-  const { loggedIn,setLoggedIn } = useContext(AuthContext)
+  const { loggedIn, setLoggedIn } = useContext(AuthContext)
 
   useEffect(() => {
     if (loggedIn) {
@@ -45,25 +45,29 @@ function Login({Modal}) {
 
   return (
     <>
- {
+      {
         Modal
           ?
           <>
             <h1 className="text-4xl font-bold mb-6">Login to Access More!</h1>
-            <LoginForm form={form} handleChange={handleChange} handleSubmit={handleSubmit}/>
+            <LoginForm form={form} handleChange={handleChange} handleSubmit={handleSubmit} />
           </>
 
-          :  
-          <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-tr from-amber-200 via-transparent to-blue-400 p-4 md:p-0">
-          <h1 className="text-4xl font-bold  mb-6">Login</h1>
-            <LoginForm form={form} handleChange={handleChange} handleSubmit={handleSubmit}/>
-          <span>not the member!
-            <Link to='/register' className=' underline text-blue-400 text-lg p-3'>register here</Link>
-          </span>
-        </div>
-}  
+          :
+          <>
+            <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-tr from-amber-200 via-transparent to-blue-400 p-4 md:p-0">
+              <h1 className="text-4xl font-bold  mb-6">Login</h1>
+              <LoginForm form={form} handleChange={handleChange} handleSubmit={handleSubmit} />
+              <span>not the member!
+                <Link to='/register' className=' underline text-blue-400 text-lg p-3'>register here</Link>
+              </span>
+              <Link to="/" className='text-lg text-left absolute left-20'>&larr; Back to home</Link>
+            </div>
+          </>
+
+      }
     </>
-   
+
   );
 }
 

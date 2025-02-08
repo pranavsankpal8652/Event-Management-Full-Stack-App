@@ -76,9 +76,12 @@ function Register({ Modal }) {
           <button className="w-full cursor-pointer bg-indigo-600 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300" type="submit">
             Register
           </button>
-        </form>            <span>already registered!
+        </form>
+        <span>already registered!
           <Link to='/login' className=' underline text-blue-400 text-lg p-3'>Login here</Link>
         </span>
+        <Link to="/" className='text-lg text-left absolute left-20'>&larr; Back to home</Link>
+
       </div>
 
     </>
