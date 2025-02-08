@@ -2,7 +2,7 @@ const express=require('express')
 const { AuthRoutes } = require('./AuthRoutes')
 
 const { OwnerEventRoutes } = require('./UserEventsRoutes')
-const { EventRoutes } = require('./EventRoutes')
+const { EventRoutes } = require('./eventRoutes')
 
 
 
