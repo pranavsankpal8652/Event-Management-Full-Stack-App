@@ -15,12 +15,6 @@ mainRoutes.use('/ownerEvents',OwnerEventRoutes)
 mainRoutes.use('/events',EventRoutes)
 
 
-// mainRoutes.use('/events',eventRoutes)
-
-
-
-
-
 
 
 
