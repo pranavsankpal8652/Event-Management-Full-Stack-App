@@ -21,7 +21,7 @@ webSocket(server)  //Call The Socket Connection
 const port = process.env.PORT || 8080;
 
 // Start the server
-mongoose.connect(`mongodb://127.0.0.1:27017/${process.env.DB_NAME}`)
+mongoose.connect(`${process.env.DB_CONNECTION+process.env.DB_NAME}`)
 .then(()=>{
     server.listen(port, () => {
         console.log(`Server is running on port ${port}`);

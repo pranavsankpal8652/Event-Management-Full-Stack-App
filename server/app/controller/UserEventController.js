@@ -51,7 +51,7 @@ const readEvents = async(req, res) => {
     try{
         if(editId){
          const event=await eventModel.findOne({_id:editId})
-         console.log(event)
+        //  console.log(event)
          var obj={
             status:1,
             event
