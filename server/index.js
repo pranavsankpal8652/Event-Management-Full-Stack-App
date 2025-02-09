@@ -6,7 +6,7 @@ require('dotenv').config();  // To load environment variables from .env file
 const app = express(); // Creating an express application
 app.use( 
     cors({
-      origin: "https://event-management-full-stack-app.vercel.app/", // Change this to your actual frontend URL
+      origin: "*", // Change this to your actual frontend URL
       methods: ["GET", "POST", "PUT", "DELETE"],
       credentials: true, // Enable cookies if using authentication
     })

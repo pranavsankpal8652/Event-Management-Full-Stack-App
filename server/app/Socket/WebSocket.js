@@ -4,7 +4,7 @@ const { attendeesModel } = require("../model/AttendeesModel");
 let webSocket = (server) => {
     const io = new Server(server,{
         cors: {
-            origin: "https://event-management-full-stack-app.vercel.app/", // Or replace with "http://localhost:3000"
+            origin: "*", // Or replace with "http://localhost:3000"
             methods: ["GET", "POST"],
             allowedHeaders: ["Authorization"],
             credentials: true,
