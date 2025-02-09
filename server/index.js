@@ -4,7 +4,13 @@ const cors = require('cors');
 const mongoose=require('mongoose')
 require('dotenv').config();  // To load environment variables from .env file
 const app = express(); // Creating an express application
-app.use(cors()); // Use CORS to allow cross-origin requests (you can configure more specific options here)
+app.use(
+    cors({
+      origin: "https://event-management-full-stack-app.vercel.app/", // Change this to your actual frontend URL
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      credentials: true, // Enable cookies if using authentication
+    })
+  );; // Use CORS to allow cross-origin requests (you can configure more specific options here)
 app.use(express.json()) 
 const http = require('http');
 const server = http.createServer(app);
